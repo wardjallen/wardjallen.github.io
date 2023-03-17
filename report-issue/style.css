@@ -67,7 +67,7 @@ section {
   display: none;
 }
 
-.ironbow.logo {
+.ironbow .logo {
   background-image: url('./assets/ironbow.png');
   display: flex;
 }
