@@ -35,13 +35,12 @@ window._genesys = {
         }
       }
     };
+const customPlugin = CXBus.registerPlugin('Custom');
 
-    const customPlugin = CXBus.registerPlugin('Custom');
-
-    customPlugin.subscribe('WebChatService.started', function (e) {
+customPlugin.subscribe('WebChatService.started', function (e) {
       console.log('Chat started', e);
-    });
+});
 
-    customPlugin.subscribe('WebChatService.ended', function (e) {
+customPlugin.subscribe('WebChatService.ended', function (e) {
       console.log('Chat ended', e);
     });
