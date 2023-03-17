@@ -317,30 +317,30 @@ a:hover, a:active {
 
 
 
-body.ironbow {
-  background-image: url('./assets/ironbow.png');
+body.disney2 {
+  background-image: url('./assets/idisney2.jpeg');
   background-size: cover;
   background-position: center center;
 }
 
-.ironbow section {
+.disney2 section {
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.ironbow button {
+.disney2 button {
   background-image: none;
   background-color: #0009;
   color: white;
 }
 
-.ironbow h1 {
+.disney2 h1 {
   color: white;
   text-shadow: 1px 1px black;
 }
 
-.dironbow footer {
+.disney2 footer {
   color: white;
 }
 
