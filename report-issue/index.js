@@ -1,6 +1,6 @@
 
 const dataModel = {
-  theme: 'iron-bow-logo',
+  theme: 'ironbow',
   step: 'start',
   answers: {
     comments: '',
