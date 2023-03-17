@@ -8,8 +8,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" defer></script>
   <script src="servicenow.js" defer></script>
   <script src="webex.js" defer></script>
+  <script src="genesys.js" defer></script>
   <script src="index.js" defer></script>
   <script src="alpine.js" defer></script>
+  <script src="https://apps.usw2.pure.cloud/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.usw2.pure.cloud/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
+  
 
   <title>Report Issue</title>
   <link rel="icon" href="./assets/test.png">
@@ -47,6 +50,7 @@
             class="choice icon other"
             @click="answer(step, 'other')"
           >Other</button>
+           <button type="button" id="chat-button-simple" onclick="customPlugin.command('WebChat.open');">Start Chat (simple)</button>
         </div>
       </div>
     </section>
