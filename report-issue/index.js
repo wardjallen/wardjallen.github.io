@@ -59,7 +59,18 @@ const dataModel = {
     this.step = 'done';
     this.notifyWithWebex(this.incidentNumber, whatwaswrong, comments, name, roomName, device);
   },
-
+    async submitChat() {
+    const { whatwaswrong, comments, name } = this.answers;
+    const { roomName, device } = this;
+    this.createIncident = true;
+    this.busy = true;
+    this.incidentNumber = await createReport(whatwaswrong, comments, name, roomName, device);
+    this.busy = false;
+    console.log('created', this.incidentNumber);
+    this.step = 'done';
+    this.notifyWithWebex(this.incidentNumber, whatwaswrong, comments, name, roomName, device);
+  },
+  
   async notifyWithWebex(id, category, comments, name, roomName, device) {
     const params = new URLSearchParams(location.search);
     const bot = params.get('webextoken');
@@ -88,3 +99,4 @@ const dataModel = {
     }
   }
 }
+      
