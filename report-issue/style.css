@@ -67,8 +67,8 @@ section {
   display: none;
 }
 
-.disney .logo {
-  background-image: url('./assets/disney.png');
+.test .logo {
+  background-image: url('./assets/test.png');
   display: flex;
 }
 
