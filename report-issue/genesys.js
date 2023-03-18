@@ -46,6 +46,7 @@ customPlugin.subscribe('WebChatService.ended', function (e) {
     });
 
 function getAdvancedConfig() {
+	const params = new URLSearchParams(location.search);
 	this.device = params.get('device');
 	console.log(this.device)
       return {
