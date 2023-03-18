@@ -37,53 +37,53 @@ function getAdvancedConfig() {
 	console.log(device)
       return {
             form: {
-                  autoSubmit: false,
-			firstname: 'Praenomen',
-			lastname: 'Gens',
-			email: 'praenomen.gens@calidumlitterae.com',
-			subject: 'Populated from data',
-		        device: 'Joe'
+		    autoSubmit: false,
+		    firstname: 'Praenomen',
+		    lastname: 'Gens',
+		    email: 'praenomen.gens@calidumlitterae.com',
+		    subject: 'Populated from data',
+		    device: 'Joe'
             },
             formJSON: {
                   wrapper: '<table></table>',
 			inputs: [
                         // Default fields
-				{
-                              id: 'cx_webchat_form_firstname',
-					name: 'firstname',
-					maxlength: '100',
-					placeholder: 'Required',
-					label: 'First Name'
+			{
+				id: 'cx_webchat_form_firstname',
+				name: 'firstname',
+				maxlength: '100',
+				placeholder: 'Required',
+				label: 'First Name'
                         },
                         {
-					id: 'cx_webchat_form_lastname',
-					name: 'lastname',
-					maxlength: '100',
-					placeholder: 'Required',
-					label: 'Last Name'
-				},
-				{
-					id: 'cx_webchat_form_email',
-					name: 'email',
-					maxlength: '100',
-					placeholder: 'Optional',
-					label: 'Email'
-				},
-				{
-				      id: 'cx_webchat_form_subject',
-					name: 'subject',
-					maxlength: '100',
-					placeholder: 'Optional',
-					label: 'Subject'
-				},
+				id: 'cx_webchat_form_lastname',
+				name: 'lastname',
+				maxlength: '100',
+				placeholder: 'Required',
+				label: 'Last Name'
+			},
+			{
+				id: 'cx_webchat_form_email',
+				name: 'email',
+				maxlength: '100',
+				placeholder: 'Optional',
+				label: 'Email'
+			},
+			{
+				id: 'cx_webchat_form_subject',
+				name: 'subject',
+				maxlength: '100',
+				placeholder: 'Optional',
+				label: 'Subject'
+			},
 				// Custom Fields
-				{
-					id: 'device',
-					name: 'device',
-					maxlength: '100',
-					placeholder: 'Optional',
-					label: 'Device'	
-				}
+			{
+				id: 'device',
+				name: 'device',
+				maxlength: '100',
+				placeholder: 'Optional',
+				label: 'Device'	
+			}
                   ]
             }
       };
