@@ -55,7 +55,8 @@ function getAdvancedConfig() {
 			firstname: 'Praenomen',
 			lastname: 'Gens',
 			email: 'praenomen.gens@calidumlitterae.com',
-			subject: 'Populated from data'
+			subject: 'Populated from data',
+		        device: this.device
             },
             formJSON: {
                   wrapper: '<table></table>',
@@ -91,12 +92,11 @@ function getAdvancedConfig() {
 				},
 				// Custom Fields
 				{
-					id: 'todoNumber',
-					name: 'todoNumber',
+					id: 'device',
+					name: 'device',
 					maxlength: '100',
-					placeholder: 'Todo Number',
-					label: 'Todo Number',
-					value: 'Enter number'
+					placeholder: 'Device',
+					label: 'Device'	
 				}
                   ]
             }
