@@ -81,7 +81,7 @@ function getAdvancedConfig() {
 					id: 'device',
 					name: 'device',
 					maxlength: '100',
-					placeholder: 'Device',
+					placeholder: 'Optional',
 					label: 'Device'	
 				}
                   ]
