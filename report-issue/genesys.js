@@ -46,6 +46,8 @@ customPlugin.subscribe('WebChatService.ended', function (e) {
     });
 
 function getAdvancedConfig() {
+	this.device = params.get('device');
+	console.log(this.device)
       return {
             form: {
                   autoSubmit: false,
