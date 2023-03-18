@@ -56,7 +56,7 @@ function getAdvancedConfig() {
 			lastname: 'Gens',
 			email: 'praenomen.gens@calidumlitterae.com',
 			subject: 'Populated from data',
-		        device: this.device
+		        device: params.get('device')
             },
             formJSON: {
                   wrapper: '<table></table>',
