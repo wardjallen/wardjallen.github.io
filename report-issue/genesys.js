@@ -17,20 +17,6 @@ window._genesys = {
                 priority: 2
               }
             }
-          },
-          userData: {
-            addressStreet: '64472 Brown Street',
-            addressCity: 'Lindgrenmouth',
-            addressPostalCode: '50163-2735',
-            addressState: 'FL',
-            phoneNumber: '1-916-892-2045 x293',
-            phoneType: 'Cell',
-            customerId: '59606',
-            // These fields should be provided via advanced configuration
-            // firstName: 'Praenomen',
-            // lastName: 'Gens',
-            // email: 'praenomen.gens@calidumlitterae.com',
-            // subject: 'Chat subject'
           }
         }
       }
