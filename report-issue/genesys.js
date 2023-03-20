@@ -7,7 +7,8 @@ window._genesys = {
     widgets: {
       main: {
         downloadGoogleFont: true,
-        googleFontUrl: 'https://apps.usw2.pure.cloud/webfonts/roboto.css'
+        googleFontUrl: 'https://apps.usw2.pure.cloud/webfonts/roboto.css',
+        theme: 'light'
       },
       webchat: {
         transport: {
