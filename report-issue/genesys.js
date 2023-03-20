@@ -1,5 +1,6 @@
 const chatParams = new URLSearchParams(location.search);
 const device = chatParams.get('device');
+const roomName = chatParams.get('roomname');
 
 
 function getAdvancedConfig() {
@@ -45,12 +46,12 @@ function getAdvancedConfig() {
                 },
                 // Custom Fields
                 {
-                    id: 'todoNumber',
-                    name: 'todoNumber',
+                    id: 'roomName',
+                    name: 'roomName',
                     maxlength: '100',
-                    placeholder: 'Todo Number',
-                    label: 'Todo Number',
-                    value: 'Enter number'
+                    placeholder: 'Optional',
+                    label: 'Room Name',
+                    value: roomName
                 }
             ]
         }
