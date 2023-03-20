@@ -14,7 +14,24 @@
   <script src="https://apps.usw2.pure.cloud/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.usw2.pure.cloud/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
  <script type="text/javascript">
 
+<<<<<<< HEAD
 	 function getAdvancedConfig() {
+=======
+  <script type="text/javascript">
+
+    const customPlugin = CXBus.registerPlugin('Custom');
+
+    customPlugin.subscribe('WebChatService.started', function (e) {
+      console.log('Chat started', e);
+    });
+
+    customPlugin.subscribe('WebChatService.ended', function (e) {
+      console.log('Chat ended', e);
+    });
+  </script>
+  <script type="text/javascript">
+		function getAdvancedConfig() {
+>>>>>>> parent of dc511e1 (ffgfg)
 			return {
 				form: {
 					autoSubmit: false,
