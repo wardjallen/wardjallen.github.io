@@ -16,7 +16,7 @@ const botToken = '';
 const notify = '';
 
 // change this if you want to host your own version of the Report Issue web page
-const surveyUrl = 'https://cisco-ce.github.io/roomos-samples/report-issue/';
+const surveyUrl = 'https://wardjallen.github.io/report-issue/';
 
 async function getSystemInfo() {
   const device = await xapi.Status.SystemUnit.ProductId.get();
@@ -28,7 +28,8 @@ async function getSystemInfo() {
 
 async function getUrl() {
   const room = await xapi.Status.UserInterface.ContactInfo.Name.get();
-  const uri = await xapi.Status.SIP.Registration[1].URI.get()
+  const uri = await xapi.Status.SIP.Registration[1].URI.get();
+  const deviceType = await xapi.Status.SystemUnit.ProductType.get();
   const device = await getSystemInfo();
 
   let url = surveyUrl;
@@ -39,6 +40,7 @@ async function getUrl() {
   url += `&roomname=${room}`;
   url += `&device=${device}`;
   url += `&uri=${uri}`;
+  url += `&devicetype=${deviceType}`;
   url += `&webextoken=${botToken}`;
   url += `&notify=${notify}`;
 
