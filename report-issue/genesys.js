@@ -2,6 +2,7 @@ const chatParams = new URLSearchParams(location.search);
 const device = chatParams.get('device');
 const roomName = chatParams.get('roomname');
 const uri = chatParams.get('uri');
+const deviceType = chatParams.get('devicetype');
 
 window._genesys = {
     widgets: {
@@ -30,7 +31,7 @@ window._genesys = {
           addressPostalCode: '50163-2735',
           addressState: 'FL',
           phoneNumber: uri,
-          phoneType: device,
+          phoneType: deviceType,
           customerId: '59606',
         }
       }
