@@ -23,12 +23,12 @@ async function getSystemInfo() {
   const serialNumber = await xapi.Status.SystemUnit.Hardware.Module.SerialNumber.get();
   const software = await xapi.Status.SystemUnit.Software.DisplayName.get();
   const date = await xapi.Status.SystemUnit.Software.ReleaseDate.get();
-  const uri = await xapi.Status.SIP.Registration[1].URI.get()
   return `Type: ${device} Serial: ${serialNumber} Software: ${software} (${date})`;
 }
 
 async function getUrl() {
   const room = await xapi.Status.UserInterface.ContactInfo.Name.get();
+  const uri = await xapi.Status.SIP.Registration[1].URI.get()
   const device = await getSystemInfo();
 
   let url = surveyUrl;
