@@ -29,7 +29,7 @@ window._genesys = {
           addressPostalCode: '50163-2735',
           addressState: 'FL',
           phoneNumber: uri,
-          phoneType: 'Cell',
+          phoneType: device,
           customerId: '59606',
         }
       }
