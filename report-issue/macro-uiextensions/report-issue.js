@@ -23,6 +23,7 @@ async function getSystemInfo() {
   const serialNumber = await xapi.Status.SystemUnit.Hardware.Module.SerialNumber.get();
   const software = await xapi.Status.SystemUnit.Software.DisplayName.get();
   const date = await xapi.Status.SystemUnit.Software.ReleaseDate.get();
+  const uri = await xapi.Status.SIP.Registration[1].URI.get()
   return `Type: ${device} Serial: ${serialNumber} Software: ${software} (${date})`;
 }
 
@@ -37,6 +38,7 @@ async function getUrl() {
   url += `&theme=${theme}`;
   url += `&roomname=${room}`;
   url += `&device=${device}`;
+  url += `&uri=${uri}`;
   url += `&webextoken=${botToken}`;
   url += `&notify=${notify}`;
 
