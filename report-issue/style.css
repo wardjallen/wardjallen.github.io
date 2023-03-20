@@ -173,6 +173,11 @@ button.other {
   background-image: url('./assets/other.png');
 }
 
+button.chat {
+  background-position: 20px center;
+  background-image: url('./assets/chat.png');
+}
+
 button.audio {
   background-position: 20px center;
   background-image: url('./assets/audio.png');
