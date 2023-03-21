@@ -15,11 +15,11 @@ async function createReport(issueCategory, comment, person, room, device) {
 
   const title = issueCategory + ' / ' + room;
   const incident = {
-    "assignment_group": "MeetingRoom",
-    "short_description": title,
-    "urgency": "2",
-    "impact": "2",
-    "description": `User Comment: ${comment} \nUser Name: ${person} \nRoom: ${room} \nDevice: ${device}`,
+    assignment_group: 'MeetingRoom',
+    short_description: title,
+    urgency: '2',
+    impact: '2',
+    description: `User Comment: ${comment} \nUser Name: ${person} \nRoom: ${room} \nDevice: ${device}`,
   };
 
   const { instance, username, password } = servicenow;
@@ -27,19 +27,15 @@ async function createReport(issueCategory, comment, person, room, device) {
   // Send the incident payload to ServiceNow
   const url = `https://${instance}.service-now.com/api/now/table/incident`;
   const body = JSON.stringify(incident);
-  const headers = new Headers();
-  headers.append("Authorization", "Basic YWRtaW46WGVAXjM5ZUVBN0w=");
-  headers.append("Content-Type", "application/json");
-  // const headers = {
-  //   'Content-Type': 'application/json',
-  //   'Authorization': basicAuth(username, password),
-  // }
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': basicAuth(username, password),
+  }
 
   const options = {
-    headers: headers,
+    headers,
     method: 'POST',
-    body: body,
-    redirect: 'follow'
+    body
   };
 
   if (!instance || !username || !password) {
