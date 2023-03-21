@@ -33,10 +33,9 @@ async function createReport(issueCategory, comment, person, room, device) {
   }
 
   const options = {
-    headers: headers,
+    headers,
     method: 'POST',
-    body: body,
-    redirect: 'follow'
+    body
   };
 
   if (!instance || !username || !password) {
