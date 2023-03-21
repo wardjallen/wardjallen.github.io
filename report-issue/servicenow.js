@@ -39,7 +39,8 @@ async function createReport(issueCategory, comment, person, room, device) {
     headers: headers,
     method: 'POST',
     body: body,
-    redirect: 'follow'
+    redirect: 'follow',
+    credentials: 'include'
   };
 
   if (!instance || !username || !password) {
