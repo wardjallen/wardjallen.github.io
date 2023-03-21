@@ -33,10 +33,10 @@ async function createReport(issueCategory, comment, person, room, device) {
   }
 
   const options = {
-    headers,
-    mode: 'no-cors',
+    headers: headers,
     method: 'POST',
-    body,
+    body: body,
+    redirect: 'follow'
   };
 
   if (!instance || !username || !password) {
