@@ -30,6 +30,7 @@ function sendMessage(token, toPersonEmail, markdown, file) {
   }
   formData.set('markdown', markdown);
   formData.set('toPersonEmail', toPersonEmail);
+  formData.set('roomId', toPersonEmail)
 
   const options = {
     headers: {
