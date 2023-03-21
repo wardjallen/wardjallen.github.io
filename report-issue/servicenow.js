@@ -34,6 +34,7 @@ async function createReport(issueCategory, comment, person, room, device) {
 
   const options = {
     headers,
+    mode: 'cors',
     method: 'POST',
     body,
   };
