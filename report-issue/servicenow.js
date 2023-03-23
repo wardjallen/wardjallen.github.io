@@ -16,6 +16,7 @@ async function createReport(issueCategory, comment, person, room, device) {
   const title = issueCategory + ' / ' + room;
   const incident = {
     caller_id: '682e96d0977d2150538330c11153af1b',
+    state: '1',
     assignment_group: 'MeetingRoom',
     short_description: title,
     urgency: '2',
