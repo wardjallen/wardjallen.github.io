@@ -15,6 +15,7 @@ async function createReport(issueCategory, comment, person, room, device) {
 
   const title = issueCategory + ' / ' + room;
   const incident = {
+    caller: "682e96d0977d2150538330c11153af1b",//Should get from parameters
     assignment_group: 'MeetingRoom',
     short_description: title,
     urgency: '2',
